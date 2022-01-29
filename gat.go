@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"path/filepath"
 
-	"github.com/alecthomas/chroma/formatters"
 	"github.com/alecthomas/chroma/lexers"
 	"github.com/alecthomas/chroma/quick"
 	"github.com/fatih/color"
@@ -17,16 +15,9 @@ func main() {
 		os.Exit(0)
 	}
 	fpath := os.Args[1]
-	fmt.Println("FilePath ->", fpath)
-	/* if _, err := os.Stat(fpath); os.IsNotExist(err) {
-		color.Red("NonExistent Path !!")
-		os.Exit(0)
-	} */
-
 	fileInfo, err := os.Stat(fpath)
 	if err != nil {
 		color.Red("NonExistent Path !!")
-		fmt.Printf(err.Error())
 		os.Exit(0)
 	}
 
@@ -40,8 +31,8 @@ func main() {
 	var content = string(dat)
 	base := filepath.Base(fpath)
 	lexer := lexers.Match(base)
-	fmt.Print(formatters.Names())
 	quick.Highlight(os.Stdout, content, lexer.Config().Name, "terminal256", "monokai")
+	color.Green("--------END-------")
 
 }
 
