@@ -18,3 +18,8 @@ Program accepts single argument which is file name
 ```
 
 ![program output](./program_output.png)
+
+## Future Enhancements 🔮
+
+1. Pagination of file
+2. Control output behaviour via options (theme,output)
