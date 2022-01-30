@@ -6,18 +6,15 @@ At present intention is only to
 
 1. Read a file passed as argument
 
-2. Output to stdout with syntax highlighting using chromao
+2. Output to stdout with syntax highlighting using chroma
 
-# Usage
+## Usage
 
+Download relevant binary from release.
+Program accepts single argument which is file name
+
+```shell
+> ./gat package.json
 ```
-Yet to be updated
-```
 
-## Todo
-
-- [] Config should be accepted as command line args
-
-- [] Pagination of file
-
-- [] Incemental file read
+![program output](./program_output.png)
